@@ -1,4 +1,5 @@
 # %%
+#libaries
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -6,16 +7,16 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import cross_val_score
 import xgboost as xgb
 from xgboost import XGBRegressor
-from wrang import wrangle_house
+from src.wrang import wrangle_house
 
 # %%
 #training data
-X_train, y = wrangle_house("train.csv")
+X_train, y = wrangle_house("data/train.csv")
 #loading test data separately to get Id
-test = pd.read_csv("test.csv")
+test = pd.read_csv("data/test.csv")
 test_ids = test["Id"]
 #test data
-X_test, _ = wrangle_house("test.csv", is_train=False)
+X_test, _ = wrangle_house("data/test.csv", is_train=False)
 #aligning test and train column
 X_train, X_test = X_train.align(X_test, join="left", axis=1, fill_value=0)
 
