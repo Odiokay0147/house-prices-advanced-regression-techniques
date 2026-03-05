@@ -35,12 +35,12 @@ pred = np.expm1(pred)
 
 # %%
 #creating submission file
-submission_1 = pd.DataFrame({
+submission_rfr = pd.DataFrame({
     "Id": test_ids,
     "SalePrice": pred
 })
 
-submission_1.to_csv("submission1.csv", index=False)
+submission_rfr.to_csv("submission_rfr.csv", index=False)
 
 # %%
 #checking cross validation rmse for randomforestregressor
@@ -68,12 +68,12 @@ pred_1 = np.expm1(model.predict(X_test))
 
 # %%
 #creating submission file for XGB predictions on XGB model
-submission_2 = pd.DataFrame({
+submission_xgb = pd.DataFrame({
     "Id": test_ids,
     "SalePrice": pred_1 
 })
 
-submission_2.to_csv("submission2.csv", index=False)
+submission_xgb.to_csv("submission_xgb.csv", index=False)
 
 # %%
 #checking cross validation rmse for XGB
