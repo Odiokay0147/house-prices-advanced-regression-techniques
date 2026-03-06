@@ -86,7 +86,7 @@ print("CV RMSE:", rmse.mean())
 #Histogram to check the distribution of predicted saleprice
 plt.figure(figsize=(8, 4))
 plt.hist(pred_1, bins=50, color="green", edgecolor="black")
-plt.title("Distribution of SalePrice Prediction)
+plt.title("Distribution of SalePrice Prediction")
 plt.xlabel("Sale Price")
 plt.ylabel("Frequency");
 # %%
