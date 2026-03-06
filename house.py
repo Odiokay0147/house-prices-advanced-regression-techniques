@@ -40,7 +40,7 @@ submission_rfr = pd.DataFrame({
     "SalePrice": pred
 })
 
-submission_rfr.to_csv("submission_rfr.csv", index=False)
+submission_rfr.to_csv("submissions/submission_rfr.csv", index=False)
 
 # %%
 #checking cross validation rmse for randomforestregressor
@@ -73,7 +73,7 @@ submission_xgb = pd.DataFrame({
     "SalePrice": pred_1 
 })
 
-submission_xgb.to_csv("submission_xgb.csv", index=False)
+submission_xgb.to_csv("submissions/submission_xgb.csv", index=False)
 
 # %%
 #checking cross validation rmse for XGB
